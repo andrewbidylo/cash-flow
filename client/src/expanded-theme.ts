@@ -8,5 +8,6 @@ declare module "@mui/material/styles/createPalette" {
 
   interface Palette {
     tertiary: PaletteColor;
+    indigo:PaletteColor;
   }
 }

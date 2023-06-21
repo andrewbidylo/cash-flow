@@ -1,14 +1,15 @@
+
 export const tokens = {
-  grey: {
-    100: "#f0f0f3",
-    200: "#e1e2e7",
-    300: "#d1d3da",
-    400: "#c2c5ce",
-    500: "#b3b6c2",
-    600: "#8f929b",
-    700: "#6b6d74",
-    800: "#48494e",
-    900: "#242427",
+  indigo: {
+    100: "#d9e2ef",
+    200: "#b3c5df",
+    300: "#8da7cf",
+    400: "#678abf",
+    500: "#46566e",
+    600: "#34578c",
+    700: "#1a7ee3",
+    800: "#1a2c46",
+    900: "#0d1623"
   },
   primary: {
     // light green
@@ -59,9 +60,9 @@ export const themeSettings = {
     tertiary: {
       ...tokens.tertiary,
     },
-    grey: {
-      ...tokens.grey,
-      main: tokens.grey[500],
+    indigo: {
+      ...tokens.indigo,
+      main: tokens.indigo[500],
     },
     background: {
       default: tokens.background.main,
@@ -83,24 +84,24 @@ export const themeSettings = {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 20,
       fontWeight: 800,
-      color: tokens.grey[200],
+      color: tokens.indigo[500],
     },
     h4: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 14,
       fontWeight: 600,
-      color: tokens.grey[300],
+      color: tokens.indigo[700],
     },
     h5: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 12,
       fontWeight: 400,
-      color: tokens.grey[500],
+      color: tokens.indigo[700],
     },
     h6: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 10,
-      color: tokens.grey[700],
+      color: tokens.indigo[700],
     },
   },
 };
