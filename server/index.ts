@@ -5,9 +5,11 @@ import cors from "cors"
 import dotenv from "dotenv"
 import helmet from "helmet"
 import morgan from "morgan"
-import kpiRoutes from "./routes/kpi";
+import kpiRoutes from "./routes/kpi"
+import productRoutes from "./routes/products"
 import KPI from "./models/KPI"
-import { kpis } from "./data/data"
+import Product from "./models/Product"
+import { kpis, products } from "./data/data"
 
 /* CONFIGURATION */
 dotenv.config()
@@ -22,6 +24,7 @@ app.use(cors())
 
 /* ROUTES */
 app.use("/kpi", kpiRoutes)
+app.use("/product", productRoutes);
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000
