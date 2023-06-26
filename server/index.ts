@@ -7,6 +7,7 @@ import helmet from "helmet"
 import morgan from "morgan"
 import kpiRoutes from "./routes/kpi"
 import productRoutes from "./routes/products"
+import transactionRoutes from "./routes/transactions"
 import KPI from "./models/KPI"
 import Product from "./models/Product"
 import { kpis, products } from "./data/data"
@@ -24,7 +25,8 @@ app.use(cors())
 
 /* ROUTES */
 app.use("/kpi", kpiRoutes)
-app.use("/product", productRoutes);
+app.use("/product", productRoutes)
+app.use("/transaction", transactionRoutes)
 
 /* MONGOOSE SETUP */
 const PORT = process.env.PORT || 9000
@@ -35,11 +37,11 @@ const PORT = process.env.PORT || 9000
     useUnifiedTopology: true,
   }as ConnectOptions)
   .then(async () => {
-    app.listen(PORT, () => console.log(`Server is running on the port: ${PORT}`));
+    app.listen(PORT, () => console.log(`Server is running on the port: ${PORT}`))
      /* ADD DATA ONE TIME ONLY OR AS NEEDED */
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);
     // Product.insertMany(products);
     // Transaction.insertMany(transactions);
   })
-  .catch((error) => console.log(`${error} did not connect`));
+  .catch((error) => console.log(`${error} did not connect`))
