@@ -10,7 +10,8 @@ import productRoutes from "./routes/products"
 import transactionRoutes from "./routes/transactions"
 import KPI from "./models/KPI"
 import Product from "./models/Product"
-import { kpis, products } from "./data/data"
+import Transaction from "./models/Transaction"
+import { kpis, products, transactions } from "./data/data"
 
 /* CONFIGURATION */
 dotenv.config()
