@@ -30,16 +30,7 @@ const Row3 = () => {
             "& .MuiDataGrid-root": {
               color: palette.grey[700],
               border: "none",
-            },
-            "& .MuiDataGrid-cell": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
-            },
-            "& .MuiDataGrid-columnHeaders": {
-              borderBottom: `1px solid ${palette.grey[800]} !important`,
-            },
-            "& .MuiDataGrid-columnSeparator": {
-              visibility: "hidden",
-            },
+            }
           }}
         >
           <DataGrid
@@ -51,7 +42,31 @@ const Row3 = () => {
           />
         </Box>
       </DashboardBox>
-      <DashboardBox gridArea="h"></DashboardBox>
+      <DashboardBox gridArea="h">
+      <BoxHeader
+          title="Recent Orders"
+          sideText={`${transactionData?.length} latest transactions`}
+        />
+        <Box
+          mt="1rem"
+          p="0 0.5rem"
+          height="80%"
+          sx={{
+            "& .MuiDataGrid-root": {
+              color: palette.grey[800],
+              border: "none",
+            }
+          }}
+        >
+          <DataGrid
+            columnHeaderHeight={25}
+            rowHeight={35}
+            hideFooter={true}
+            rows={transactionData || []}
+            columns={transactionColumns}
+          />
+        </Box>
+      </DashboardBox>
       <DashboardBox gridArea="i"></DashboardBox>
       <DashboardBox gridArea="j"></DashboardBox>
     </>
