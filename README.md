@@ -17,5 +17,5 @@ DB: MongoBD
 
 ## Getting Started
 
-- Install all dependencies (using the `npm install` command).
-- Start the web server using the `npm dev run ` command. The app will be served at <http://localhost:5173/>.
+- Install all dependencies for client and server (using the `npm install` command).
+- Start the client and web server using the `npm dev run ` command. The app will be served at <http://localhost:5173/>.
