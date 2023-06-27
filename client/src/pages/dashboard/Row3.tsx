@@ -2,7 +2,7 @@ import DashboardBox from '@/components/DashboardBox'
 import React, { useMemo } from "react"
 import BoxHeader from "@/components/BoxHeader"
 import { DataGrid } from "@mui/x-data-grid"
-import {productColumns, transactionColumns} from "@/pages/dashboard/grid"
+import { productColumns, transactionColumns } from "@/pages/dashboard/grid"
 import { Cell, Pie, PieChart } from "recharts"
 import FlexBetween from "@/components/FlexBetween"
 import { Box, Typography, useTheme } from "@mui/material"
@@ -14,10 +14,10 @@ import {
 
 const Row3 = () => {
   const { palette } = useTheme()
-  const pieColors = [palette.primary[500], palette.primary[400]];
-  const { data: kpiData } = useGetKpisQuery();
-  const { data: productData } = useGetProductsQuery();
-  const { data: transactionData } = useGetTransactionsQuery();
+  const pieColors = [palette.primary[500], palette.primary[400]]
+  const { data: kpiData } = useGetKpisQuery()
+  const { data: productData } = useGetProductsQuery()
+  const { data: transactionData } = useGetTransactionsQuery()
 
   const pieChartData = useMemo(() => {
     if (kpiData) {
@@ -42,7 +42,7 @@ const Row3 = () => {
   return (
     <>
       <DashboardBox gridArea="g">
-      <BoxHeader
+        <BoxHeader
           title="List of Products"
           sideText={`${productData?.length} products`}
         />
@@ -67,7 +67,7 @@ const Row3 = () => {
         </Box>
       </DashboardBox>
       <DashboardBox gridArea="h">
-      <BoxHeader
+        <BoxHeader
           title="Recent Orders"
           sideText={`${transactionData?.length} latest transactions`}
         />
@@ -92,7 +92,7 @@ const Row3 = () => {
         </Box>
       </DashboardBox>
       <DashboardBox gridArea="i">
-      <BoxHeader title="Expense Breakdown By Category" sideText="+4%" />
+        <BoxHeader title="Expense Breakdown By Category" sideText="+4%" />
         <FlexBetween mt="0.5rem" gap="0.5rem" p="0 1rem" textAlign="center">
           {pieChartData?.map((data, i) => (
             <Box key={`${data[0].name}-${i}`}>
@@ -115,7 +115,32 @@ const Row3 = () => {
           ))}
         </FlexBetween>
       </DashboardBox>
-      <DashboardBox gridArea="j"></DashboardBox>
+      <DashboardBox gridArea="j">
+        <BoxHeader
+          title="Overall Summary and Explanation Data"
+          sideText="+15%"
+        />
+        <Box
+          height="15px"
+          margin="1.25rem 1rem 0.4rem 1rem"
+          bgcolor={palette.primary[600]}
+          borderRadius="1rem"
+        >
+          <Box
+            height="15px"
+            bgcolor={palette.primary[400]}
+            borderRadius="1rem"
+            width="40%"
+          ></Box>
+        </Box>
+        <Typography margin="0 1rem" variant="h6">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          In ut arcu semper tellus ultricies vehicula ac eu lectus.
+          Sed ultricies leo fringilla quam semper, eu tincidunt arcu condimentum.
+          Nullam ornare sagittis risus, quis hendrerit felis fermentum sit amet.
+          Sed molestie placerat dui, non condimentum nisi sollicitudin in.
+        </Typography>
+      </DashboardBox>
     </>
   )
 }

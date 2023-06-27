@@ -1,7 +1,7 @@
 # Cash Flow
 
 Cash Flow is a single-page finance application. 
-Client: TypeScript, React, Redux (Redux Query), Material UI,  HTML5, CSS3.
+Client: TypeScript, React, Redux (RTK Query), Material UI,  HTML5, CSS3.
 Server: Node.js, Express, Mongoose.
 Database: MongoDB
 
