@@ -30,7 +30,7 @@ app.use("/product", productRoutes)
 app.use("/transaction", transactionRoutes)
 
 /* MONGOOSE SETUP */
-const PORT = process.env.PORT || 9000
+const PORT = process.env.PORT || 8000
 
 
   mongoose.connect(process.env.MONGO_URL, {
@@ -39,6 +39,7 @@ const PORT = process.env.PORT || 9000
   }as ConnectOptions)
   .then(async () => {
     app.listen(PORT, () => console.log(`Server is running on the port: ${PORT}`))
+
      /* ADD DATA ONE TIME ONLY OR AS NEEDED */
     // await mongoose.connection.db.dropDatabase();
     // KPI.insertMany(kpis);

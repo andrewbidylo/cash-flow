@@ -5,6 +5,7 @@ import { useMemo } from "react"
 import { BrowserRouter, Route, Routes } from "react-router-dom"
 import Navbar from "@/pages/navbar"
 import Dashboard from "@/pages/dashboard"
+import Predictions from "@/pages/predictions"
 
 
 function App() {
@@ -20,7 +21,7 @@ function App() {
               <Navbar/>
               <Routes>
                 <Route path="/" element={<Dashboard/>}/>
-                <Route path="/prediction" element={<>Prediction page</>}/>
+                <Route path="/predictions" element={<Predictions/>}/>
                 <Route/>
               </Routes>
               </Box>

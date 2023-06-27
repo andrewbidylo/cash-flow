@@ -12,7 +12,7 @@ const Navbar = () => {
     <FlexBetween
       mb="0.25rem"
       p="0.5rem 0rem"
-      color={palette.indigo[300]}
+      color={palette.primary[300]}
     >
 
       <FlexBetween gap="0.75rem">
@@ -27,7 +27,7 @@ const Navbar = () => {
             to="/"
             onClick={() => setSelected("dashboard")}
             style={{
-              color: selected === "dashboard" ? "#1a7ee3" : palette.indigo[500],
+              color: selected === "dashboard" ? "#1a7ee3" : palette.primary[500],
               textDecoration: "inherit"
             }}
           >
@@ -39,7 +39,7 @@ const Navbar = () => {
             to="/predictions"
             onClick={() => setSelected("predictions")}
             style={{
-              color: selected === "predictions" ? "#1a7ee3" : palette.indigo[500],
+              color: selected === "predictions" ? "#1a7ee3" : palette.primary[500],
               textDecoration: "inherit"
             }}
           >

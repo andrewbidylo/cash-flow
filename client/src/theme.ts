@@ -1,16 +1,5 @@
 
 export const tokens = {
-  indigo: {
-    100: "#d9e2ef",
-    200: "#b3c5df",
-    300: "#8da7cf",
-    400: "#678abf",
-    500: "#46566e",
-    600: "#34578c",
-    700: "#1a7ee3",
-    800: "#1a2c46",
-    900: "#0d1623"
-  },
   primary: {
     100: "#d9e2ef",
     200: "#b3c5df",
@@ -45,6 +34,17 @@ export const tokens = {
 
 // mui theme settings
 export const themeSettings = {
+  components :{
+    MuiButton: {
+      styleOverrides: {
+        root: () => ({
+          '&:hover': {
+            color:"#000",
+          },
+        })}
+        ,
+      },
+  },
   palette: {
     primary: {
       ...tokens.primary,
@@ -57,10 +57,6 @@ export const themeSettings = {
     },
     tertiary: {
       ...tokens.tertiary,
-    },
-    indigo: {
-      ...tokens.indigo,
-      main: tokens.indigo[500],
     },
     background: {
       default: tokens.background.main,
@@ -82,24 +78,24 @@ export const themeSettings = {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 20,
       fontWeight: 800,
-      color: tokens.indigo[500],
+      color: tokens.primary[500],
     },
     h4: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 14,
       fontWeight: 600,
-      color: tokens.indigo[700],
+      color: tokens.primary[700],
     },
     h5: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 12,
       fontWeight: 400,
-      color: tokens.indigo[700],
+      color: tokens.primary[700],
     },
     h6: {
       fontFamily: ["Inter", "sans-serif"].join(","),
       fontSize: 10,
-      color: tokens.indigo[700],
+      color: tokens.primary[700],
     },
   },
 };

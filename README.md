@@ -7,12 +7,9 @@ Database: MongoDB
 
 
 ## Final Product
+!["main_page_1"](https://github.com/andrewbidylo/cash-flow/blob/master/client/docs/dashboard.png?raw=true)
 
-
-
-## Dependencies
-
-
+!["main_page_2"](https://github.com/andrewbidylo/cash-flow/blob/master/client/docs/predictions.png?raw=true)
 
 
 ## Getting Started
