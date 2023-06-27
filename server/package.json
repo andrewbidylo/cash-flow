@@ -5,6 +5,9 @@
   "main": "index.ts",
   "type": "commonjs",
   "ext": "ts",
+  "engines": {
+    "node": "18.x"
+  },
   "ignore": [
     "src/**/*.spec.ts"
   ],
