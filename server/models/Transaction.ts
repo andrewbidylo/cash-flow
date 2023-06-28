@@ -14,7 +14,7 @@ const TransactionSchema = new Schema(
     },
     amount: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     productIds: [

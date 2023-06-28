@@ -9,12 +9,12 @@ const daySchema = new Schema(
     date: String,
     revenue: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     expenses: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
   },
@@ -27,22 +27,22 @@ const monthSchema = new Schema(
     month: String,
     revenue: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     expenses: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     operationalExpenses: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     nonOperationalExpenses: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
   },
@@ -53,24 +53,24 @@ const KPISchema = new Schema(
   {
     totalProfit: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     totalRevenue: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     totalExpenses: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     expensesByCategory: {
       type: Map,
       of: {
         type: Currency,
-        currency: "USD",
+        currency: "CAD",
         get: (v) => v / 100,
       },
     },

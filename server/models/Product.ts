@@ -10,12 +10,12 @@ const ProductSchema = new Schema(
   {
     price: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     expense: {
       type: Currency,
-      currency: "USD",
+      currency: "CAD",
       get: (v) => v / 100,
     },
     transactions: [
